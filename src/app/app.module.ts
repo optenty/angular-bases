@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {CounterModule} from "./math/counter.module";
 import {HeroesModule} from "./heroes/heroes.module";
+import {DbzModule} from "./dbz/dbz.module";
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import {HeroesModule} from "./heroes/heroes.module";
     BrowserModule,
     BrowserAnimationsModule,
     CounterModule,
+    DbzModule,
     HeroesModule
   ],
   providers: [],
