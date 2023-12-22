@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Character} from "../../interfaces/character.interface";
 
 @Component({
-  selector: 'app-dbz-list',
+  selector: 'dbz-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent {
+
+ /*El decorator impot hace que el valor de debajo si le pasamos los datos desde el padre recoja estos datos y sino tendrá los que le asociemos "por defecto", por así decirlo, en realidad es por el ciclo de vida pero bueno*/
+  @Input()
+  public characterList: Character[] = [
+    {
+      name: 'Trunks',
+      power: 10,
+    }
+  ];
 
 }
