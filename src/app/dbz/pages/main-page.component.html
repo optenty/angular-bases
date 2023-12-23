@@ -2,12 +2,12 @@
 <hr>
 <div class="row">
   <div class="col">
-    <dbz-list [characterList]="characters"></dbz-list>
+    <dbz-list [characterList]="characters" (onDelete)="deleteCharacter($event)"></dbz-list>
 
   </div>
   <div class="col">
     <!--Output es un decorator para transmitir información desde el hijo hasta el padre-->
     <!--Lección 67-->
-    <dbz-add-character (onNewCharacter)="newCharacter($event)"></dbz-add-character>
+    <dbz-add-character (onNewCharacter)="newChar($event)"></dbz-add-character>
   </div>
 </div>

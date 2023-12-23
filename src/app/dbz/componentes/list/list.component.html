@@ -3,15 +3,17 @@
   <!--Con el índice podriamos tener toda esta información pero Angular nos da estas posibilidades para facilitarnos la tarea-->
   <li *ngFor="let character of characterList;
    let i= index let isFirst = first let isLast  = last let isEven = even let isOdd  = odd"
-      class="list-group-item"
+      class="list-group-item d-flex justify-content-between align-items-center"
       [ngClass]="{
       'list-group-item-dark': isLast,
       'list-group-item-primary': isEven,
      }">
-    <span class="text-primary">{{ i + 1 }}</span>
-    <span>. {{ character.name }} -</span>
-    <span><strong>Power:</strong> {{ character.power }}</span>
-    <span>Es par: {{ isEven }}</span>
+    <div>
+      <span class="text-primary">{{ i + 1 }}</span>
+      <span>. {{ character.name }} -</span>
+      <span><strong>Power:</strong> {{ character.power }}</span>
+    </div>
+    <button class="btn btn-danger" (click)="deleteCharacter(character.id!)">Borrar</button>
 
   </li>
 
